@@ -1,0 +1,28 @@
+{
+  "name": "wdl-widgets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-job": "webpack --config job/build.js",
+    "watch-job": "webpack --config job/build.js --watch",
+    "build": "concurrently \"npm run build-job\"",
+    "start": "concurrently \"npm run watch-job\"  \"http-server dist\"" 
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "node-sass": "^4.5.3",
+    "typescript": "^2.4.2",
+    "concurrently": "^3.5.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.4",
+    "http-server": "^0.10.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.2",
+    "webpack": "^3.5.4"
+  }
+}
